@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG File Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="app">
+        <section class="hero">
+            <h1>Chat With Your Files</h1>
+            <p>Upload a file, then ask questions based on its content.</p>
+        </section>
+
+        <section class="card">
+            <h2>1. Upload File</h2>
+
+            <div class="upload-box">
+                <input id="fileInput" type="file" accept=".txt,.pdf,.docx" />
+                <button id="uploadBtn">Upload File</button>
+            </div>
+
+            <div id="uploadStatus" class="status"></div>
+
+            <div id="fileInfo" class="file-info hidden">
+                <p><strong>File Name:</strong> <span id="fileName"></span></p>
+                <p><strong>File ID:</strong> <span id="fileId"></span></p>
+                <p><strong>Total Chunks:</strong> <span id="totalChunks"></span></p>
+            </div>
+        </section>
+
+        <section id="chatSection" class="card hidden">
+            <h2>2. Ask Questions</h2>
+
+            <div id="chatBox" class="chat-box"></div>
+
+            <div class="chat-input">
+                <input id="questionInput" type="text" placeholder="Ask something about the uploaded file..." />
+                <button id="askBtn">Ask</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
